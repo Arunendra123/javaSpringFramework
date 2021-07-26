@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 4................... -->
+<!-- Collection -->
+<bean class="spring.Emp.Emp" name="emp_1">
+        <property name="empName">
+           <value>Arunendra</value>
+        </property>
+      
+        <property name="empNumber">
+         <list>
+            <value>8417808076</value>
+            <value>9935156888</value>
+            <value>8417808076</value>
+            <value>9935156888</value>
+         </list>
+        </property>
+        
+         <property name="empAddress">
+           <set>
+              <value>Varanasi</value>
+              <value>Chandauli</value>
+              <value>Lucknow</value>
+              <value>Lucknow</value>
+           </set>
+         </property>
+         
+         <property name="empCourses">
+           <map>
+              <entry key="Maths" value="20 Years" />
+              <entry key="Physics" value="45 Years" />
+              <entry key="History" value="4 Years" />
+              <entry key="Hindi" value="25 Years" />
+           </map>
+         </property>
+</bean>
+</beans> 

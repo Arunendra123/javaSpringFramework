@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--  1............... -->
+<bean class="spring.Vehicle.Engine" name="eng_1">
+      <property name="engName" value="Honda" />
+      <property name="engCC" value="90" />
+      <property name="maxSpeed" value="180" />
+</bean>
+<bean class="spring.Vehicle.Vehicle" name="v_1">
+      <property name="vName" value="Honda City" />
+      <property name="vWheel" value="4" />
+      <!-- <property name="vEng">
+         <ref bean="eng_1" />
+      </property> -->
+      <property name="vEng" ref="eng_1" />
+</bean>
+
+</beans> 

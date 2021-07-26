@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--  1............... -->
+<bean class="spring.lifeCycle.Samosa" name="s_1" init-method="init" destroy-method="destroy">
+  <property name="price" value="2.5"/>
+</bean>
+<bean class="spring.lifeCycle.Samosa" name="s_2">
+  <property name="price" value="3.5"/>
+</bean>
+<bean class="spring.lifeCycle.Pepsi" name="p_2">
+  <property name="price" value="12"/>
+</bean>
+
+</beans> 
