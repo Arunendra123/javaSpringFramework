@@ -8,7 +8,7 @@ public class main {
     	   System.out.println("My Fisrt Spring project: Injecting Refence");
     	   System.out.println("2. Using Spring xml");
     	   // Using Spring Framework : Loosely coupled
-    	   ApplicationContext ac=new ClassPathXmlApplicationContext("spring/Vehicle/config.xml");
+    	   ApplicationContext ac=new ClassPathXmlApplicationContext("spring/InjectReference/config.xml");
     	   Vehicle v_1=(Vehicle) ac.getBean("v_1");
     	   System.out.println(v_1);
        }

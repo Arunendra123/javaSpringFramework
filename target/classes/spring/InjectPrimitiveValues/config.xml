@@ -9,7 +9,7 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--  1............... -->
-<bean class="spring.Students.Student" name="student_1">
+<bean class="spring.InjectPrimitiveValues.Student" name="student_1">
       <property name="studentId">
           <value>34</value>
       </property>
@@ -23,12 +23,12 @@
 
 
 <!-- 2.................... -->
-<bean class="spring.Students.Student" name="student_2">
+<bean class="spring.InjectPrimitiveValues.Student" name="student_2">
       <property name="studentId" value="34" />
       <property name="studentName" value="Arunendra" />
       <property name="studentAddress" value="Chandauli" /> 
 </bean>
-<bean class="spring.Students.Student" name="student_3">
+<bean class="spring.InjectPrimitiveValues.Student" name="student_3">
       <property name="studentId" value="64" />
       <property name="studentName" value="Dheeru" />
       <property name="studentAddress" value="Chandauli" /> 
@@ -37,8 +37,8 @@
 <!-- 3....................... -->
 <!-- Using p schema -->
 
-<bean class="spring.Students.Student" name="student_4" p:studentId="23" p:studentName="Arunendra" p:studentAddress="Chandauli" />
-<bean class="spring.Students.Student" name="student_5" p:studentId="22" p:studentName="Dheeru" p:studentAddress="Chandauli" />
+<bean class="spring.InjectPrimitiveValues.Student" name="student_4" p:studentId="23" p:studentName="Arunendra" p:studentAddress="Chandauli" />
+<bean class="spring.InjectPrimitiveValues.Student" name="student_5" p:studentId="22" p:studentName="Dheeru" p:studentAddress="Chandauli" />
 
 
 <!-- 4................... -->

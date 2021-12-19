@@ -9,12 +9,12 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--  1............... -->
-<bean class="spring.Vehicle.Engine" name="eng_1">
+<bean class="spring.InjectReference.Engine" name="eng_1">
       <property name="engName" value="Honda" />
       <property name="engCC" value="90" />
       <property name="maxSpeed" value="180" />
 </bean>
-<bean class="spring.Vehicle.Vehicle" name="v_1">
+<bean class="spring.InjectReference.Vehicle" name="v_1">
       <property name="vName" value="Honda City" />
       <property name="vWheel" value="4" />
       <!-- <property name="vEng">

@@ -9,18 +9,20 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--  1............... -->
-<bean class="spring.InjectReference.Engine" name="eng_1">
-      <property name="engName" value="Honda" />
-      <property name="engCC" value="90" />
-      <property name="maxSpeed" value="180" />
-</bean>
-<bean class="spring.InjectReference.Vehicle" name="v_1">
+
+<bean class="spring.InjectReference.InnerBeans.Vehicle" name="v_1">
       <property name="vName" value="Honda City" />
       <property name="vWheel" value="4" />
       <!-- <property name="vEng">
          <ref bean="eng_1" />
       </property> -->
-      <property name="vEng" ref="eng_1" />
+      <property name="vEng" >
+         <bean class="spring.InjectReference.InnerBeans.Engine" name="eng_1">
+                <property name="engName" value="Honda" />
+                <property name="engCC" value="90" />
+                <property name="maxSpeed" value="180" />
+         </bean>
+      </property>
 </bean>
 
 </beans> 

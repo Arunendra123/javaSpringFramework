@@ -7,10 +7,10 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
-   <bean class="spring.constructorInjection.Cert" name="c_1">
+   <bean class="spring.InjectConstructor.Cert" name="c_1">
        <constructor-arg value="My Certificate"/>
    </bean>
-   <bean class="spring.constructorInjection.Person" name="p_1">
+   <bean class="spring.InjectConstructor.Person" name="p_1">
          <constructor-arg value="Arunendra"/>
          <constructor-arg value="23" type="int"/>
          <constructor-arg value="11" type="int"/>

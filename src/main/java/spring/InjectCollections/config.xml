@@ -10,7 +10,7 @@
 
 <!-- 4................... -->
 <!-- Collection -->
-<bean class="spring.Emp.Emp" name="emp_1">
+<bean class="spring.InjectCollections.Emp" name="emp_1">
         <property name="empName">
            <value>Arunendra</value>
         </property>

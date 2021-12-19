@@ -17,7 +17,7 @@ public class main {
 
     	   System.out.println("2. Using Spring xml");
     	   // Using Spring Framework : Loosely coupled
-    	   ApplicationContext ac=new ClassPathXmlApplicationContext("spring/Students/config.xml");
+    	   ApplicationContext ac=new ClassPathXmlApplicationContext("spring/InjectPrimitiveValues/config.xml");
     	   Student student_1=(Student) ac.getBean("student_1");
     	   Student student_2=(Student) ac.getBean("student_2");
     	   System.out.println(student_1+"\n"+student_2);
