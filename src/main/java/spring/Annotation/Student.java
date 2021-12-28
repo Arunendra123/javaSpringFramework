@@ -2,6 +2,7 @@ package spring.Annotation;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -14,15 +15,12 @@ public class Student {
 	    @Value("#{12+34}")
         private int rollNumber;
 	    
+	    @Autowired
+	    private Teacher teacher;
+	    
 		public Student() {
 			super();
 			// TODO Auto-generated constructor stub
-		}
-
-		public Student(String name, int rollNumber) {
-			super();
-			this.name = name;
-			this.rollNumber = rollNumber;
 		}
 
 		public String getName() {
@@ -41,8 +39,16 @@ public class Student {
 			this.rollNumber = rollNumber;
 		}
 
+		public Teacher getTeacher() {
+			return teacher;
+		}
+
+		public void setTeacher(Teacher teacher) {
+			this.teacher = teacher;
+		}
+
 		@Override
 		public String toString() {
-			return "Student [name=" + name + ", rollNumber=" + rollNumber + "]";
+			return "Student [name=" + name + ", rollNumber=" + rollNumber + ", teacher=" + teacher + "]";
 		}
 }

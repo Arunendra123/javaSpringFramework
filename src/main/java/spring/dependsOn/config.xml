@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <!-- C depends on B and B depends on A -->
+ <!-- <bean id="a_1" class="spring.dependsOn.A"></bean>
+ <bean id="b_1" class="spring.dependsOn.B" depends-on="a_1"></bean>
+ <bean id="c_1" class="spring.dependsOn.C" depends-on="b_1"></bean> -->
+ 
+  <!-- C depends on B and B depends on A -->
+ <bean id="a_1" class="spring.dependsOn.A" depends-on="c_1"></bean>
+ <bean id="b_1" class="spring.dependsOn.B" ></bean>
+ <bean id="c_1" class="spring.dependsOn.C" depends-on="b_1"></bean>
+ 
+</beans>

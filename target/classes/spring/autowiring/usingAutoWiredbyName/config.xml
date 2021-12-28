@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="car_1" class="spring.autowiring.usingAutoWiredbyName.Car"
+		p:name="Maruti" p:model="C23" autowire="byName" />
+
+    <!-- byName:- We must supply id as property name -->
+	<bean id="engine" class="spring.autowiring.usingAutoWiredbyName.Engine"
+		p:name="Honda" />
+
+	<bean id="eng_2" class="spring.autowiring.usingAutoWiredbyName.Engine"
+		p:name="Khaami" autowire-candidate="false"/>
+
+</beans>

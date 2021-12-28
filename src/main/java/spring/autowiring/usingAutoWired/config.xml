@@ -8,7 +8,8 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
 
-   <context:annotation-config/>
+   <!-- <context:annotation-config/> -->
+   <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
    
    <bean class="spring.autowiring.usingAutoWired.Address" name="a_1">
      <property name="vill" value="Sikandarpur"></property>

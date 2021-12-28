@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--  1............... -->
+   
+   <bean class="spring.InjectFactoryClassObject.WithoutStaticMethod.CarFactory" id="car_2">
+      <property name="carfactory" value="Hond"></property>
+   </bean>
+   
+   <bean  id="car_1" factory-bean="car_2" factory-method="getInstance"></bean>
+
+</beans> 

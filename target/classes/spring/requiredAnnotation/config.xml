@@ -7,7 +7,8 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
-
+ 
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
 	<bean class="spring.requiredAnnotation.Student" name="student_1">
 		<property name="studentId" value="34" />
 		<property name="studentName" value="Arunendra" />
